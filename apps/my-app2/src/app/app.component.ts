@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NxWelcomeComponent } from './nx-welcome.component';
+import { generateRandomNumber } from '@nx15/my-lib';
+
 
 @Component({
   standalone: true,
@@ -9,5 +11,9 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'my-app2';
+  randomNumber: number | undefined ;
+
+  generateRandomNumberito() {
+    this.randomNumber = generateRandomNumber(1, 10);
+  }
 }

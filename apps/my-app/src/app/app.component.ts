@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { generateRandomNumber } from '@nx15/my-lib';
+
 
 @Component({
   selector: 'nx15-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'my-app';
+  randomNumber: number | undefined ;
+
+  generateRandomNumberito() {
+    this.randomNumber = generateRandomNumber(1, 1000);
+  }
 }
